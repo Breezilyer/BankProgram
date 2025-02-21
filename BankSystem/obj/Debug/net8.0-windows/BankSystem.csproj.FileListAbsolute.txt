@@ -14,4 +14,3 @@ C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\o
 C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.pdb
 C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.genruntimeconfig.cache
 C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\ref\BankSystem.dll
-C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.sourcelink.json
