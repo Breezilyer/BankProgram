@@ -29,6 +29,7 @@ namespace BankSystem
             string bal = cBalance.Text;
 
             Customer c = new Customer(username, pin, tlf, cpr, email, card, bal);
+            c.Create();
 
             cUsername.Text = "";
             cPin.Text = "";
@@ -37,6 +38,12 @@ namespace BankSystem
             cEmail.Text = "";
             cCardNumber.Text = "";
             cBalance.Text = "";
+
+            MessageBox.Show("Customer Created! :3");
+            this.Close();
+
+            var adminPanel = new AdminPanel();
+            adminPanel.Show();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace BankSystem.File_Handling_Folder
 {
     public class Customer
     {
+        public static List<Customer> customers = new List<Customer>();
         public string Username { get; set; }
         public string Pin { get; set; }
         public string Tlfnr { get; set; }
@@ -31,6 +32,17 @@ namespace BankSystem.File_Handling_Folder
         public void Create()
         {
             File_Handling_Folder.FileHandling.CustomerCreate(this);
+            customers.Add(this);
+        }
+
+        public static Customer FromFileFormat(string line)
+        {
+            string[] parts = line.Split(',');
+            if (parts.Length == 7)
+            {
+                return new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]);
+            }
+            return null;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace BankSystem.File_Handling_Folder
     internal class FileHandling
     {
         static string path = @"Customers.csv";
+
         public static void CustomerCreate(Customer c)
         {
             if (!File.Exists(path))

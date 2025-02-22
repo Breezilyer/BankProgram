@@ -25,5 +25,12 @@ namespace BankSystem
             createCustomerPage.Show();
 
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var loginPage = new LoginPage();
+            loginPage.Show();
+        }
     }
 }

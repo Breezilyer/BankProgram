@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             CreateCustomerButton = new Button();
+            ExitButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -55,12 +56,24 @@
             CreateCustomerButton.UseVisualStyleBackColor = true;
             CreateCustomerButton.Click += CreateCustomerButton_Click;
             // 
+            // ExitButton
+            // 
+            ExitButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExitButton.Location = new Point(12, 9);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(41, 23);
+            ExitButton.TabIndex = 2;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
+            // 
             // AdminPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Purple;
             ClientSize = new Size(492, 168);
+            Controls.Add(ExitButton);
             Controls.Add(CreateCustomerButton);
             Controls.Add(label1);
             Name = "AdminPanel";
@@ -74,5 +87,6 @@
 
         private Label label1;
         private Button CreateCustomerButton;
+        private Button ExitButton;
     }
 }
