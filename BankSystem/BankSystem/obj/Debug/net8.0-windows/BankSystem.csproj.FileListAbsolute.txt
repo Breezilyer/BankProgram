@@ -15,3 +15,21 @@ C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\o
 C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.genruntimeconfig.cache
 C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\ref\BankSystem.dll
 C:\Users\emilp\Desktop\Programmerings mapper\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.sourcelink.json
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\bin\Debug\net8.0-windows\BankSystem.exe
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\bin\Debug\net8.0-windows\BankSystem.deps.json
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\bin\Debug\net8.0-windows\BankSystem.runtimeconfig.json
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\bin\Debug\net8.0-windows\BankSystem.dll
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\bin\Debug\net8.0-windows\BankSystem.pdb
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.csproj.GenerateResource.cache
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.AssemblyInfoInputs.cache
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.AssemblyInfo.cs
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.csproj.CoreCompileInputs.cache
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.sourcelink.json
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.dll
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\refint\BankSystem.dll
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.pdb
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.genruntimeconfig.cache
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\ref\BankSystem.dll
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.AdminPanel.resources
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.LoginPage.resources
