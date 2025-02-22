@@ -5,41 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace BankSystem.FileHandling_Folder
+namespace BankSystem.File_Handling_Folder
 {
-    public class Customer
+    internal class FileHandling
     {
         static string path = @"Customers.csv";
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Tlfnr { get; set; }
-        public string Cprnr { get; set; }
-        public string Email { get; set; }
-        public string Cardnumber { get; set; }
-        public string Balance { get; set; }
-
-        public Customer(string username, string password, string tlfnr, string cprnr, string email, string cardnumber, string balance)
+        public static void CustomerCreate(Customer c)
         {
-            Username = username;
-            Password = password;
-            Tlfnr = tlfnr;
-            Cprnr = cprnr;
-            Email = email;
-            Cardnumber = cardnumber;
-            Balance = balance;
-        }
-
-        static void CustomerCSV()
-        {
-            using (StreamReader sr = File.OpenText(path))
+            if (!File.Exists(path))
             {
-                string s;
-                while ((s = sr.ReadLine()!) != null)
-                {
-                    WriteLine(s);
-                }
+                StreamWriter sw = File.CreateText(path);
+                sw.Close();
             }
-        }
 
+            StreamWriter CustomerCreate = File.AppendText(path);
+            CustomerCreate.WriteLine(c.Username + "," + c.Pin + "," + c.Tlfnr + "," + c.Cprnr + "," + c.Email + "," + c.Cardnumber + "," + c.Balance);
+            CustomerCreate.Close();
+        }
     }
 }

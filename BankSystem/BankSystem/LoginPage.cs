@@ -18,13 +18,14 @@ namespace BankSystem
 
             if (username == "admin" &&  password == "1234")
             {
+                this.Hide();
                 LoginUsername.Text = "";
                 LoginPIN.Text = "";
                 adminPanel.Show();
             }
             
 
-            // Here will the Customer login be vv
+            // Customer Login
         }
     }
 }

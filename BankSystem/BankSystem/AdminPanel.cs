@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankSystem.File_Handling_Folder;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,9 @@ namespace BankSystem
 
         private void CreateCustomerButton_Click(object sender, EventArgs e)
         {
+            var createCustomerPage = new AddCustomerPage();
+            this.Close();
+            createCustomerPage.Show();
 
         }
     }
