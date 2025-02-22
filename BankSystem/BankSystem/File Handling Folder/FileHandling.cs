@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace BankSystem.CustomerFileHandling
+namespace BankSystem.FileHandling_Folder
 {
     public class Customer
     {

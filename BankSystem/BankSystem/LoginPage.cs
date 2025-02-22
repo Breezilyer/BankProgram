@@ -18,6 +18,8 @@ namespace BankSystem
 
             if (username == "admin" &&  password == "1234")
             {
+                LoginUsername.Text = "";
+                LoginPIN.Text = "";
                 adminPanel.Show();
             }
             

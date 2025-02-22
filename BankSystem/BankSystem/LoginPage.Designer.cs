@@ -97,7 +97,7 @@
             LoginButton.UseVisualStyleBackColor = true;
             LoginButton.Click += LoginButton_Click;
             // 
-            // Form1
+            // LoginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -109,7 +109,9 @@
             Controls.Add(Username);
             Controls.Add(LoginPIN);
             Controls.Add(LoginUsername);
-            Name = "Form1";
+            MaximizeBox = false;
+            Name = "LoginPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Bank";
             ResumeLayout(false);
             PerformLayout();
