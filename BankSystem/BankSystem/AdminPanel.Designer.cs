@@ -110,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Purple;
+            BackColor = Color.DarkGreen;
             ClientSize = new Size(492, 168);
             Controls.Add(UpdateCustomerButton);
             Controls.Add(DeleteCustomerButton);

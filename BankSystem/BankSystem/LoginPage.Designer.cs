@@ -79,7 +79,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(70, 23);
+            label1.Location = new Point(58, 23);
             label1.Name = "label1";
             label1.Size = new Size(199, 30);
             label1.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Purple;
+            BackColor = Color.DarkGreen;
             ClientSize = new Size(323, 326);
             Controls.Add(LoginButton);
             Controls.Add(label1);

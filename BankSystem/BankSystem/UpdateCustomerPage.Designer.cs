@@ -262,7 +262,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Purple;
+            BackColor = Color.DarkGreen;
             ClientSize = new Size(861, 350);
             Controls.Add(ExitButton);
             Controls.Add(UsernameButton);
