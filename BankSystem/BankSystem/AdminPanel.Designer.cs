@@ -80,6 +80,7 @@
             ReadCustomerButton.TabIndex = 3;
             ReadCustomerButton.Text = "Read Customers";
             ReadCustomerButton.UseVisualStyleBackColor = true;
+            ReadCustomerButton.Click += ReadCustomerButton_Click;
             // 
             // DeleteCustomerButton
             // 
@@ -91,6 +92,7 @@
             DeleteCustomerButton.TabIndex = 4;
             DeleteCustomerButton.Text = "Delete Customer";
             DeleteCustomerButton.UseVisualStyleBackColor = true;
+            DeleteCustomerButton.Click += DeleteCustomerButton_Click;
             // 
             // UpdateCustomerButton
             // 

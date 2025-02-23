@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BankSystem.File_Handling_Folder
@@ -35,25 +36,126 @@ namespace BankSystem.File_Handling_Folder
             File_Handling_Folder.FileHandling.CustomerCreate(this);
         }
 
-        public void updateCustomer(string update)
+        public static void updateCustomer(string username, string pin, string tlfnr, string cprnr, string email, string cardnumber, string balance, string originalCPR)
         {
-            string[] lines = File.ReadAllLines(path);
-            for (int i = 0; i < lines.Length; i++)
+            string tempPath = @"Customers_temp.csv";
+            bool updated = false;
+
+            using (StreamReader reader = new StreamReader(path))
+            using (StreamWriter writer = new StreamWriter(tempPath))
             {
-                if (lines[i].Split(',')[3] == Cprnr)
+                string line;
+                while ((line = reader.ReadLine()!) != null)
                 {
-                    string line = lines[i];
-                    Customer customer = Customer.FromFileFormat(line);
-                    customer.Username = update;
-                    customer.Pin = update;
-                    customer.Tlfnr = update;
-                    customer.Cprnr = update;
-                    customer.Email = update;
-                    customer.Cardnumber = update;
-                    customer.Balance = update;
-                    File.WriteAllLines(path, lines);
+                    string[] subs = line.Split(',');
+                    if (subs[3] == originalCPR)
+                    {
+                        updated = true;
+                        line = $"{username},{pin},{tlfnr},{cprnr},{email},{cardnumber},{balance}";
+                    }
+                    writer.WriteLine(line);
                 }
             }
+
+            if (updated)
+            {
+                File.Delete(path); 
+                File.Move(tempPath, path); 
+                MessageBox.Show("The customer was updated successfully!", "Updating", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                File.Delete(tempPath); 
+                MessageBox.Show("That customer doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void updateBal(string username, string pin, string tlfnr, string cprnr, string email, string cardnumber, int balance)
+        {
+            string tempPath = @"Customers_temp.csv";
+            bool updated = false;
+
+            using (StreamReader reader = new StreamReader(path))
+            using (StreamWriter writer = new StreamWriter(tempPath))
+            {
+                string line;
+                while ((line = reader.ReadLine()!) != null)
+                {
+                    string[] subs = line.Split(',');
+                    if (subs[0] == username)
+                    {
+                        updated = true;
+                        line = $"{username},{pin},{tlfnr},{cprnr},{email},{cardnumber},{balance}";
+                    }
+                    writer.WriteLine(line);
+                }
+            }
+            if (updated)
+            {
+                File.Delete(path);
+                File.Move(tempPath, path);
+            }
+            else
+            {
+                File.Delete(tempPath);
+            }
+        }
+
+        public static Customer readCustomer(string CPRNumber)
+        {
+            using (StreamReader sr = File.OpenText(path))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    string[] subs = s.Split(",");
+
+                    if (subs[3] == CPRNumber)
+                    {
+                        return new Customer(subs[0], subs[1], subs[2], subs[3], subs[4], subs[5], subs[6]);
+                    }
+                }
+            }
+
+            MessageBox.Show("That customer doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return null;
+        }
+
+
+        public static Customer deleteCustomer(string originalCPR)
+        {
+            string tempPath = @"Customers_temp.csv";
+            bool deleted = false;
+
+            using (StreamReader reader = new StreamReader(path))
+            using (StreamWriter writer = new StreamWriter(tempPath))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (line.Split(',')[3] != originalCPR)
+                    {
+                        writer.WriteLine(line);
+                    }
+                    else
+                    {
+                        deleted = true;
+                    }
+                }
+            }
+
+            if (deleted)
+            {
+                File.Delete(path);
+                File.Move(tempPath, path);
+                MessageBox.Show("The customer was deleted successfully!", "Deleting", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                File.Delete(tempPath);
+                MessageBox.Show("That customer doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return null;
         }
 
         public static Customer FromFileFormat(string line)

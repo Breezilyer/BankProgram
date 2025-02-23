@@ -39,5 +39,19 @@ namespace BankSystem
             this.Close();
             updateCustomerPage.Show();
         }
+
+        private void ReadCustomerButton_Click(object sender, EventArgs e)
+        {
+            var readCustomer = new ReadCustomer();
+            this.Close();
+            readCustomer.Show();
+        }
+
+        private void DeleteCustomerButton_Click(object sender, EventArgs e)
+        {
+            var deleteCustomer = new DeleteCustomer();
+            this.Close();
+            deleteCustomer.Show();
+        }
     }
 }

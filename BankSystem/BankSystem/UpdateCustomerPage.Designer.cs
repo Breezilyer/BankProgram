@@ -48,12 +48,7 @@
             CardNumber = new TextBox();
             Balance = new TextBox();
             UsernameButton = new Button();
-            PINCodeButton = new Button();
-            PhoneNumberButton = new Button();
-            CPRNumberButton = new Button();
-            EmailButton = new Button();
-            CardNumberButton = new Button();
-            BalanceButton = new Button();
+            ExitButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -61,7 +56,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(306, 9);
+            label1.Location = new Point(287, 9);
             label1.Name = "label1";
             label1.Size = new Size(287, 30);
             label1.TabIndex = 0;
@@ -72,7 +67,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(118, 39);
+            label2.Location = new Point(99, 39);
             label2.Name = "label2";
             label2.Size = new Size(623, 21);
             label2.TabIndex = 1;
@@ -81,7 +76,7 @@
             // CPRNumber
             // 
             CPRNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CPRNumber.Location = new Point(394, 106);
+            CPRNumber.Location = new Point(375, 106);
             CPRNumber.Name = "CPRNumber";
             CPRNumber.Size = new Size(103, 25);
             CPRNumber.TabIndex = 2;
@@ -91,16 +86,16 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(394, 82);
+            label3.Location = new Point(375, 82);
             label3.Name = "label3";
-            label3.Size = new Size(109, 21);
+            label3.Size = new Size(112, 21);
             label3.TabIndex = 3;
-            label3.Text = "CPR number:";
+            label3.Text = "CPR Number:";
             // 
             // Enter
             // 
             Enter.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Enter.Location = new Point(394, 137);
+            Enter.Location = new Point(375, 137);
             Enter.Name = "Enter";
             Enter.Size = new Size(103, 32);
             Enter.TabIndex = 4;
@@ -244,7 +239,7 @@
             // UsernameButton
             // 
             UsernameButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            UsernameButton.Location = new Point(12, 245);
+            UsernameButton.Location = new Point(375, 273);
             UsernameButton.Name = "UsernameButton";
             UsernameButton.Size = new Size(91, 29);
             UsernameButton.TabIndex = 19;
@@ -252,65 +247,16 @@
             UsernameButton.UseVisualStyleBackColor = true;
             UsernameButton.Click += UsernameButton_Click;
             // 
-            // PINCodeButton
+            // ExitButton
             // 
-            PINCodeButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            PINCodeButton.Location = new Point(118, 245);
-            PINCodeButton.Name = "PINCodeButton";
-            PINCodeButton.Size = new Size(85, 29);
-            PINCodeButton.TabIndex = 20;
-            PINCodeButton.Text = "Enter";
-            PINCodeButton.UseVisualStyleBackColor = true;
-            // 
-            // PhoneNumberButton
-            // 
-            PhoneNumberButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            PhoneNumberButton.Location = new Point(218, 245);
-            PhoneNumberButton.Name = "PhoneNumberButton";
-            PhoneNumberButton.Size = new Size(131, 29);
-            PhoneNumberButton.TabIndex = 21;
-            PhoneNumberButton.Text = "Enter";
-            PhoneNumberButton.UseVisualStyleBackColor = true;
-            // 
-            // CPRNumberButton
-            // 
-            CPRNumberButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CPRNumberButton.Location = new Point(366, 245);
-            CPRNumberButton.Name = "CPRNumberButton";
-            CPRNumberButton.Size = new Size(112, 29);
-            CPRNumberButton.TabIndex = 22;
-            CPRNumberButton.Text = "Enter";
-            CPRNumberButton.UseVisualStyleBackColor = true;
-            // 
-            // EmailButton
-            // 
-            EmailButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EmailButton.Location = new Point(493, 245);
-            EmailButton.Name = "EmailButton";
-            EmailButton.Size = new Size(100, 29);
-            EmailButton.TabIndex = 23;
-            EmailButton.Text = "Enter";
-            EmailButton.UseVisualStyleBackColor = true;
-            // 
-            // CardNumberButton
-            // 
-            CardNumberButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CardNumberButton.Location = new Point(605, 245);
-            CardNumberButton.Name = "CardNumberButton";
-            CardNumberButton.Size = new Size(117, 29);
-            CardNumberButton.TabIndex = 24;
-            CardNumberButton.Text = "Enter";
-            CardNumberButton.UseVisualStyleBackColor = true;
-            // 
-            // BalanceButton
-            // 
-            BalanceButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BalanceButton.Location = new Point(737, 245);
-            BalanceButton.Name = "BalanceButton";
-            BalanceButton.Size = new Size(100, 29);
-            BalanceButton.TabIndex = 25;
-            BalanceButton.Text = "Enter";
-            BalanceButton.UseVisualStyleBackColor = true;
+            ExitButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExitButton.Location = new Point(12, 9);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(41, 23);
+            ExitButton.TabIndex = 20;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // UpdateCustomerPage
             // 
@@ -318,12 +264,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Purple;
             ClientSize = new Size(861, 350);
-            Controls.Add(BalanceButton);
-            Controls.Add(CardNumberButton);
-            Controls.Add(EmailButton);
-            Controls.Add(CPRNumberButton);
-            Controls.Add(PhoneNumberButton);
-            Controls.Add(PINCodeButton);
+            Controls.Add(ExitButton);
             Controls.Add(UsernameButton);
             Controls.Add(Balance);
             Controls.Add(CardNumber);
@@ -373,11 +314,6 @@
         private TextBox CardNumber;
         private TextBox Balance;
         private Button UsernameButton;
-        private Button PINCodeButton;
-        private Button PhoneNumberButton;
-        private Button CPRNumberButton;
-        private Button EmailButton;
-        private Button CardNumberButton;
-        private Button BalanceButton;
+        private Button ExitButton;
     }
 }

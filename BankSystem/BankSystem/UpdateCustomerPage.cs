@@ -38,7 +38,17 @@ namespace BankSystem
         {
             string input = CPRNumber.Text;
 
-            Customer customer = customer.updateCustomer(Username.Text);
+            Customer.updateCustomer(Username.Text, PINCode.Text, PhoneNumber.Text, UpdateCPRNumber.Text, Email.Text, CardNumber.Text, Balance.Text, CPRNumber.Text);
+            this.Close();
+            var adminPanel = new AdminPanel();
+            adminPanel.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            var adminPanel = new AdminPanel();
+            this.Close();
+            adminPanel.Show();
         }
     }
 }

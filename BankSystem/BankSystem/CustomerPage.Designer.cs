@@ -28,20 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
+            WelcomeLabel = new Label();
+            Bal = new Label();
+            pictureBox1 = new PictureBox();
+            Balance = new Label();
+            WithdrawButton = new Button();
+            DepositButton = new Button();
+            WithdrawBox = new TextBox();
+            DepositBox = new TextBox();
+            ExitButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // WelcomeLabel
+            // 
+            WelcomeLabel.AutoSize = true;
+            WelcomeLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WelcomeLabel.ForeColor = SystemColors.ButtonFace;
+            WelcomeLabel.Location = new Point(12, 51);
+            WelcomeLabel.Name = "WelcomeLabel";
+            WelcomeLabel.Size = new Size(72, 30);
+            WelcomeLabel.TabIndex = 0;
+            WelcomeLabel.Text = "label1";
+            // 
+            // Bal
+            // 
+            Bal.AutoSize = true;
+            Bal.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Bal.ForeColor = Color.LimeGreen;
+            Bal.Location = new Point(12, 98);
+            Bal.Name = "Bal";
+            Bal.Size = new Size(94, 30);
+            Bal.TabIndex = 1;
+            Bal.Text = "Balance:";
+            Bal.Click += label1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.Location = new Point(12, 131);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(194, 44);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // Balance
+            // 
+            Balance.AutoSize = true;
+            Balance.BackColor = Color.White;
+            Balance.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Balance.ForeColor = Color.LimeGreen;
+            Balance.Location = new Point(21, 140);
+            Balance.Name = "Balance";
+            Balance.Size = new Size(34, 25);
+            Balance.TabIndex = 3;
+            Balance.Text = "0$";
+            // 
+            // WithdrawButton
+            // 
+            WithdrawButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WithdrawButton.Location = new Point(12, 193);
+            WithdrawButton.Name = "WithdrawButton";
+            WithdrawButton.Size = new Size(94, 30);
+            WithdrawButton.TabIndex = 4;
+            WithdrawButton.Text = "Withdraw";
+            WithdrawButton.UseVisualStyleBackColor = true;
+            WithdrawButton.Click += WithdrawButton_Click;
+            // 
+            // DepositButton
+            // 
+            DepositButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DepositButton.Location = new Point(112, 193);
+            DepositButton.Name = "DepositButton";
+            DepositButton.Size = new Size(94, 30);
+            DepositButton.TabIndex = 5;
+            DepositButton.Text = "Deposit";
+            DepositButton.UseVisualStyleBackColor = true;
+            DepositButton.Click += DepositButton_Click;
+            // 
+            // WithdrawBox
+            // 
+            WithdrawBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WithdrawBox.Location = new Point(12, 229);
+            WithdrawBox.Name = "WithdrawBox";
+            WithdrawBox.Size = new Size(94, 29);
+            WithdrawBox.TabIndex = 6;
+            // 
+            // DepositBox
+            // 
+            DepositBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DepositBox.Location = new Point(112, 229);
+            DepositBox.Name = "DepositBox";
+            DepositBox.Size = new Size(94, 29);
+            DepositBox.TabIndex = 7;
+            // 
+            // ExitButton
+            // 
+            ExitButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExitButton.Location = new Point(8, 13);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(41, 23);
+            ExitButton.TabIndex = 21;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // CustomerPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Purple;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(223, 270);
+            Controls.Add(ExitButton);
+            Controls.Add(DepositBox);
+            Controls.Add(WithdrawBox);
+            Controls.Add(DepositButton);
+            Controls.Add(WithdrawButton);
+            Controls.Add(Balance);
+            Controls.Add(pictureBox1);
+            Controls.Add(Bal);
+            Controls.Add(WelcomeLabel);
             Name = "CustomerPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerPage";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label WelcomeLabel;
+        private Label Bal;
+        private PictureBox pictureBox1;
+        private Label Balance;
+        private Button WithdrawButton;
+        private Button DepositButton;
+        private TextBox WithdrawBox;
+        private TextBox DepositBox;
+        private Button ExitButton;
     }
 }

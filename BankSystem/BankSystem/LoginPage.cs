@@ -16,11 +16,15 @@ namespace BankSystem
             string username = LoginUsername.Text;
             string password = LoginPIN.Text;
 
+            if (!File.Exists(path))
+            {
+                StreamWriter sw = File.CreateText(path);
+                sw.Close();
+            }
+
             // Admin Login
             if (username == "admin" && password == "1234")
             {
-                LoginUsername.Text = "";
-                LoginPIN.Text = "";
                 this.Hide();
                 var adminPanel = new AdminPanel();
                 adminPanel.Show();
@@ -33,7 +37,7 @@ namespace BankSystem
                 if (customer != null && customer.Username == username && customer.Pin == password)
                 {
                     this.Hide();
-                    var customerPage = new CustomerPage(customer.Username);
+                    var customerPage = new CustomerPage(customer.Username, customer.Pin, customer.Tlfnr, customer.Cprnr, customer.Email, customer.Cardnumber, customer.Balance);
                     customerPage.Show();
                 }
             }

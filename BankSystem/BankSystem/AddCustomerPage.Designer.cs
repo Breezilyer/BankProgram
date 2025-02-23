@@ -43,6 +43,7 @@
             label6 = new Label();
             label7 = new Label();
             CreateCustomerButton = new Button();
+            ExitButton = new Button();
             SuspendLayout();
             // 
             // cUsername
@@ -189,12 +190,24 @@
             CreateCustomerButton.UseVisualStyleBackColor = true;
             CreateCustomerButton.Click += CreateCustomerButton_Click;
             // 
+            // ExitButton
+            // 
+            ExitButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExitButton.Location = new Point(12, 12);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(41, 23);
+            ExitButton.TabIndex = 15;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
+            // 
             // AddCustomerPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Purple;
             ClientSize = new Size(226, 497);
+            Controls.Add(ExitButton);
             Controls.Add(CreateCustomerButton);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -234,5 +247,6 @@
         private Label label6;
         private Label label7;
         private Button CreateCustomerButton;
+        private Button ExitButton;
     }
 }

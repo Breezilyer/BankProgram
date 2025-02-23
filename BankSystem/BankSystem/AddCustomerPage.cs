@@ -45,5 +45,12 @@ namespace BankSystem
             var adminPanel = new AdminPanel();
             adminPanel.Show();
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            var adminPanel = new AdminPanel();
+            this.Close();
+            adminPanel.Show();
+        }
     }
 }
