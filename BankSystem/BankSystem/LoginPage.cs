@@ -17,13 +17,13 @@ namespace BankSystem
             string password = LoginPIN.Text;
 
             // Admin Login
-            var adminPanel = new AdminPanel();
 
             if (username == "admin" && password == "1234")
             {
-                this.Hide();
                 LoginUsername.Text = "";
                 LoginPIN.Text = "";
+                this.Hide();
+                var adminPanel = new AdminPanel();
                 adminPanel.Show();
             }
 

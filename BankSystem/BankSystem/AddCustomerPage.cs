@@ -43,7 +43,7 @@ namespace BankSystem
             this.Close();
 
             var adminPanel = new AdminPanel();
-            adminPanel.Show();
+            adminPanel.ShowDialog();
         }
     }
 }
