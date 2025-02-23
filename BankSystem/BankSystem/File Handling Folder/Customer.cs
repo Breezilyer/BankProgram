@@ -4,11 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BankSystem.File_Handling_Folder
 {
     public class Customer
     {
+        static string path = @"Customers.csv";
         public string Username { get; set; }
         public string Pin { get; set; }
         public string Tlfnr { get; set; }
@@ -33,9 +35,25 @@ namespace BankSystem.File_Handling_Folder
             File_Handling_Folder.FileHandling.CustomerCreate(this);
         }
 
-        public void updateCustomer(string updated)
+        public void updateCustomer(string update)
         {
-
+            string[] lines = File.ReadAllLines(path);
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].Split(',')[3] == Cprnr)
+                {
+                    string line = lines[i];
+                    Customer customer = Customer.FromFileFormat(line);
+                    customer.Username = update;
+                    customer.Pin = update;
+                    customer.Tlfnr = update;
+                    customer.Cprnr = update;
+                    customer.Email = update;
+                    customer.Cardnumber = update;
+                    customer.Balance = update;
+                    File.WriteAllLines(path, lines);
+                }
+            }
         }
 
         public static Customer FromFileFormat(string line)

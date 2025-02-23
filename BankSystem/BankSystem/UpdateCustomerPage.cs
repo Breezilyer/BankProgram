@@ -15,6 +15,7 @@ namespace BankSystem
 {
     public partial class UpdateCustomerPage : Form
     {
+        static string path = @"Customers.csv";
         public UpdateCustomerPage()
         {
             InitializeComponent();
@@ -22,18 +23,22 @@ namespace BankSystem
 
         private void Enter_Click(object sender, EventArgs e)
         {
-            string path = @"Customers.csv";
+            string input = CPRNumber.Text;
             foreach (string line in File.ReadLines(path))
             {
-                string input = CPRNumber.Text;
                 Customer customer = Customer.FromFileFormat(line);
                 if (customer != null && customer.Cprnr == input)
                 {
-                    this.Hide();
-                    var customerPage = new CustomerPage(customer.Username);
-                    customerPage.Show();
+                    MessageBox.Show($"You have picked: {customer.Username}");
                 }
             }
+        }
+
+        private void UsernameButton_Click(object sender, EventArgs e)
+        {
+            string input = CPRNumber.Text;
+
+            Customer customer = customer.updateCustomer(Username.Text);
         }
     }
 }
