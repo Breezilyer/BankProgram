@@ -37,6 +37,7 @@
             BackColor = Color.Purple;
             ClientSize = new Size(800, 450);
             Name = "CustomerPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerPage";
             ResumeLayout(false);
         }

@@ -31,6 +31,9 @@
             label1 = new Label();
             CreateCustomerButton = new Button();
             ExitButton = new Button();
+            ReadCustomerButton = new Button();
+            DeleteCustomerButton = new Button();
+            UpdateCustomerButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +51,7 @@
             // 
             CreateCustomerButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CreateCustomerButton.ForeColor = SystemColors.ControlText;
-            CreateCustomerButton.Location = new Point(168, 86);
+            CreateCustomerButton.Location = new Point(77, 63);
             CreateCustomerButton.Name = "CreateCustomerButton";
             CreateCustomerButton.Size = new Size(145, 31);
             CreateCustomerButton.TabIndex = 1;
@@ -67,12 +70,49 @@
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
+            // ReadCustomerButton
+            // 
+            ReadCustomerButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ReadCustomerButton.ForeColor = SystemColors.ControlText;
+            ReadCustomerButton.Location = new Point(77, 100);
+            ReadCustomerButton.Name = "ReadCustomerButton";
+            ReadCustomerButton.Size = new Size(145, 31);
+            ReadCustomerButton.TabIndex = 3;
+            ReadCustomerButton.Text = "Read Customers";
+            ReadCustomerButton.UseVisualStyleBackColor = true;
+            // 
+            // DeleteCustomerButton
+            // 
+            DeleteCustomerButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DeleteCustomerButton.ForeColor = SystemColors.ControlText;
+            DeleteCustomerButton.Location = new Point(264, 100);
+            DeleteCustomerButton.Name = "DeleteCustomerButton";
+            DeleteCustomerButton.Size = new Size(145, 31);
+            DeleteCustomerButton.TabIndex = 4;
+            DeleteCustomerButton.Text = "Delete Customer";
+            DeleteCustomerButton.UseVisualStyleBackColor = true;
+            // 
+            // UpdateCustomerButton
+            // 
+            UpdateCustomerButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UpdateCustomerButton.ForeColor = SystemColors.ControlText;
+            UpdateCustomerButton.Location = new Point(264, 63);
+            UpdateCustomerButton.Name = "UpdateCustomerButton";
+            UpdateCustomerButton.Size = new Size(145, 31);
+            UpdateCustomerButton.TabIndex = 5;
+            UpdateCustomerButton.Text = "Update Customer";
+            UpdateCustomerButton.UseVisualStyleBackColor = true;
+            UpdateCustomerButton.Click += UpdateCustomerButton_Click;
+            // 
             // AdminPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Purple;
             ClientSize = new Size(492, 168);
+            Controls.Add(UpdateCustomerButton);
+            Controls.Add(DeleteCustomerButton);
+            Controls.Add(ReadCustomerButton);
             Controls.Add(ExitButton);
             Controls.Add(CreateCustomerButton);
             Controls.Add(label1);
@@ -88,5 +128,8 @@
         private Label label1;
         private Button CreateCustomerButton;
         private Button ExitButton;
+        private Button ReadCustomerButton;
+        private Button DeleteCustomerButton;
+        private Button UpdateCustomerButton;
     }
 }

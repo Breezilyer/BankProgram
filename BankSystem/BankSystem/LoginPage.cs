@@ -17,7 +17,6 @@ namespace BankSystem
             string password = LoginPIN.Text;
 
             // Admin Login
-
             if (username == "admin" && password == "1234")
             {
                 LoginUsername.Text = "";
@@ -28,7 +27,6 @@ namespace BankSystem
             }
 
             // Customer Login
-
             foreach (string line in File.ReadLines(path))
             {
                 Customer customer = Customer.FromFileFormat(line);

@@ -33,6 +33,11 @@ namespace BankSystem.File_Handling_Folder
             File_Handling_Folder.FileHandling.CustomerCreate(this);
         }
 
+        public void updateCustomer(string updated)
+        {
+
+        }
+
         public static Customer FromFileFormat(string line)
         {
             string[] parts = line.Split(',');

@@ -35,3 +35,4 @@ C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-window
 C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.LoginPage.resources
 C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.AddCustomerPage.resources
 C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.CustomerPage.resources
+C:\Users\emilp\Desktop\BankProgram\BankSystem\BankSystem\obj\Debug\net8.0-windows\BankSystem.UpdateCustomerPage.resources

@@ -28,9 +28,16 @@ namespace BankSystem
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
             var loginPage = new LoginPage();
+            this.Close();
             loginPage.Show();
+        }
+
+        private void UpdateCustomerButton_Click(object sender, EventArgs e)
+        {
+            var updateCustomerPage = new UpdateCustomerPage();
+            this.Close();
+            updateCustomerPage.Show();
         }
     }
 }
